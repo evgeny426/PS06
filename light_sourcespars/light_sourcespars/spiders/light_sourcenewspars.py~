@@ -14,7 +14,7 @@ class LightSourcenewsparsSpider(scrapy.Spider):
             yield {
                 'name': light_source.css('div.lsooF span::text').get(),
                 'price': light_source.css('div.pY3d2 span::text').get(),
-                'url': light_source.css('a').attrib['href']
+                'url': response.urljoin(light_source.css('a').attrib['href'])
             }
 
 

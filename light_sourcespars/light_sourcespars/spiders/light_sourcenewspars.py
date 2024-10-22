@@ -1,7 +1,6 @@
 import scrapy
 import csv
 
-parsed_data = []
 
 class LightSourcenewsparsSpider(scrapy.Spider):
     name = "light_sourcenewspars"
